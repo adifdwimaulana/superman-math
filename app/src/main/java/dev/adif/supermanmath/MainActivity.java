@@ -218,6 +218,7 @@ public class MainActivity extends AppCompatActivity {
         negResult = (negativeTop + negativeBottom) * -1;
         result = posResult + negResult;
 
+
         if(positive != 0 || negative !=0) {
             if(positive > negative) {
                 for(int i = 0; i < negative; i++){
@@ -227,6 +228,13 @@ public class MainActivity extends AppCompatActivity {
                     negBottomArr[i].setAlpha(0.3f);
                 }
             } else if(negative > positive) {
+                for(int i = 0; i < positive; i++){
+                    posTopArr[i].setAlpha(0.3f);
+                    posBottomArr[i].setAlpha(0.3f);
+                    negTopArr[i].setAlpha(0.3f);
+                    negBottomArr[i].setAlpha(0.3f);
+                }
+            } else if(positive == negative){
                 for(int i = 0; i < positive; i++){
                     posTopArr[i].setAlpha(0.3f);
                     posBottomArr[i].setAlpha(0.3f);
